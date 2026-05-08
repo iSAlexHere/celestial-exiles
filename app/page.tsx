@@ -6,10 +6,12 @@ import { ModsSection } from "@/components/mods-section"
 import { ConnectSection } from "@/components/connect-section"
 import { CommunitySection } from "@/components/community-section"
 import { Footer } from "@/components/footer"
+import { AmbientBackground } from "@/components/ambient-background"
 
 export default function Home() {
   return (
     <main className="relative">
+      <AmbientBackground />
       <Navbar />
       <HeroSection />
       <FeaturesSection />

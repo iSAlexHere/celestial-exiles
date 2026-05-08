@@ -186,3 +186,26 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, oklch(0.78 0.14 55 / 0.5), transparent);
 }
+
+/* Ambient fog animations */
+@keyframes fog-drift {
+  0%, 100% { transform: translateX(0) translateY(0); opacity: 0.02; }
+  25% { transform: translateX(5vw) translateY(-2vh); opacity: 0.035; }
+  50% { transform: translateX(2vw) translateY(1vh); opacity: 0.02; }
+  75% { transform: translateX(-3vw) translateY(-1vh); opacity: 0.03; }
+}
+
+@keyframes fog-drift-reverse {
+  0%, 100% { transform: translateX(0) translateY(0); opacity: 0.02; }
+  25% { transform: translateX(-4vw) translateY(2vh); opacity: 0.03; }
+  50% { transform: translateX(-1vw) translateY(-1vh); opacity: 0.015; }
+  75% { transform: translateX(3vw) translateY(1vh); opacity: 0.025; }
+}
+
+.ambient-fog {
+  animation: fog-drift 30s ease-in-out infinite;
+}
+
+.ambient-fog-reverse {
+  animation: fog-drift-reverse 25s ease-in-out infinite;
+}
