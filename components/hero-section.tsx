@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, MessageCircle } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -89,6 +89,16 @@ export function HeroSection() {
             <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
           </Link>
           
+          <a
+            href="https://discord.gg/KkTbEjrTDe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-10 py-4 text-sm tracking-[0.2em] uppercase border border-[#5865F2]/50 text-[#5865F2] hover:bg-[#5865F2]/10 transition-all duration-300"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Join Discord
+          </a>
+
           <Link
             href="#features"
             className="inline-flex items-center px-10 py-4 text-sm tracking-[0.2em] uppercase border border-border text-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"

@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { Menu, X, MessageCircle } from "lucide-react"
 
 const navLinks = [
   { href: "#features", label: "Features" },
@@ -69,7 +69,16 @@ export function Navbar() {
           </div>
 
           {/* CTA */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="https://discord.gg/KkTbEjrTDe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 text-xs tracking-[0.15em] uppercase border border-[#5865F2]/50 text-[#5865F2] hover:bg-[#5865F2]/10 transition-all duration-300"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Discord
+            </a>
             <Link
               href="#connect"
               className="inline-flex items-center px-6 py-2.5 text-xs tracking-[0.2em] uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 glow-gold"
@@ -120,8 +129,18 @@ export function Navbar() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.1 }}
-                className="pt-4"
+                className="pt-4 flex flex-col gap-3"
               >
+                <a
+                  href="https://discord.gg/KkTbEjrTDe"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="inline-flex items-center gap-2 px-6 py-3 text-xs tracking-[0.2em] uppercase border border-[#5865F2]/50 text-[#5865F2]"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Discord
+                </a>
                 <Link
                   href="#connect"
                   onClick={() => setIsOpen(false)}
