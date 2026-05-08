@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter, Cinzel } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const inter = Inter({ 
@@ -16,7 +15,6 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   title: 'Celestial Exiles | PVE X5 Conan Exiles Server',
   description: 'Enter the Exiled Lands. A premium PVE experience with 30+ mods, enhanced combat, and endless building possibilities.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
@@ -26,10 +24,6 @@ export const metadata: Metadata = {
       {
         url: '/icon-dark-32x32.png',
         media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
       },
     ],
     apple: '/apple-icon.png',
@@ -45,8 +39,8 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${cinzel.variable} bg-background scroll-smooth`}>
       <body className="font-sans antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
 }
+

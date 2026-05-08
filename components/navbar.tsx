@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
@@ -37,6 +38,13 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-3">
+            <Image
+              src="/images/logo.png"
+              alt="Celestial Exiles"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
             <span className="font-[family-name:var(--font-cinzel)] text-xl tracking-[0.2em] text-foreground group-hover:text-primary transition-colors">
               CELESTIAL
             </span>

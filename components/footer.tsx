@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowUp } from "lucide-react"
 
 export function Footer() {
@@ -14,6 +15,13 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Logo */}
           <div className="flex items-center gap-3">
+            <Image
+              src="/images/logo.png"
+              alt="Celestial Exiles"
+              width={36}
+              height={36}
+              className="rounded-full"
+            />
             <span className="font-[family-name:var(--font-cinzel)] text-lg tracking-[0.2em] text-foreground">
               CELESTIAL
             </span>
