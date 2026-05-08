@@ -40,7 +40,7 @@ export function CommunitySection() {
             </p>
 
             <a
-              href="https://discord.gg/YOUR_INVITE_CODE"
+              href="https://discord.gg/KkTbEjrTDe"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-4 p-6 bg-[#5865F2]/10 border border-[#5865F2]/30 hover:border-[#5865F2]/60 hover:bg-[#5865F2]/20 transition-all duration-300"

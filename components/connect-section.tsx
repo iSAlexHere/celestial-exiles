@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Copy, Check, Server, ArrowRight } from "lucide-react"
 
-const SERVER_IP = "123.456.789.0:27015"
+const SERVER_IP = "79.117.63.173:27015"
 const SERVER_NAME = "Celestial Exiles"
 
 export function ConnectSection() {
