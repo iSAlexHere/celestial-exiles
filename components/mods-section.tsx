@@ -4,7 +4,16 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronDown, ExternalLink } from "lucide-react"
 
-const mods = [
+interface Mod {
+  name: string
+  version: string
+  description: string
+  workshopId: string
+  author?: string
+  isTesting?: boolean
+}
+
+const mods: Mod[] = [
   { name: "Fashionist - Enhanced", version: "v5.0.2", description: "Armor & weapon style customization with color picker", workshopId: "3720921242" },
   { name: "Level 240 [Enhanced]", version: "v1.0.0", description: "Extended level cap up to 240", workshopId: "3720663670" },
   { name: "RSS_Stacks 10k", version: "v1.0.0", description: "Stack sizes increased up to 10,000", workshopId: "3720847422" },
@@ -18,6 +27,7 @@ const mods = [
   { name: "Simple Minimap", version: "v5.1.1", description: "Clean minimap overlay with markers", workshopId: "3719513784", author: "Xevyr" },
   { name: "Full Body Loot", version: "Legacy", description: "Loot full body from defeated enemies", workshopId: "2967195691" },
   { name: "Unlock Plus - Enhanced", version: "v2.0.1", description: "Unlock all feats & recipes", workshopId: "3720948133" },
+  { name: "Wings Of Valhalla", version: "Beta", description: "Custom weapons, armors, level cap & pets", workshopId: "3719965485", author: "WoV Gaming", isTesting: true },
 ]
 
 export function ModsSection() {
@@ -71,8 +81,13 @@ export function ModsSection() {
                   {mod.version}
                 </span>
 
-                <h3 className="font-medium text-foreground mb-1 group-hover:text-primary transition-colors pr-16">
+                <h3 className="font-medium text-foreground mb-1 group-hover:text-primary transition-colors pr-16 flex flex-wrap items-center gap-2">
                   {mod.name}
+                  {mod.isTesting && (
+                    <span className="text-[9px] tracking-wider uppercase bg-orange-500/10 text-orange-400 border border-orange-500/20 px-1.5 py-0.5 rounded-sm">
+                      Testing
+                    </span>
+                  )}
                 </h3>
                 {mod.author && (
                   <span className="text-[11px] text-primary/60 mb-1 block">by {mod.author}</span>
