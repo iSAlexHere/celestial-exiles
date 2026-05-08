@@ -3,14 +3,23 @@
 import { motion } from "framer-motion"
 
 const rates = [
-  { label: "XP Rate", value: "5x", highlight: true },
+  { label: "XP Rate", value: "10x", highlight: true },
   { label: "Harvest", value: "5x", highlight: true },
-  { label: "Crafting", value: "2x", highlight: false },
-  { label: "Player DMG", value: "1.5x", highlight: false },
-  { label: "NPC DMG", value: "1x", highlight: false },
-  { label: "Thrall Speed", value: "3x", highlight: false },
-  { label: "Pet Breeding", value: "3x", highlight: false },
-  { label: "Stamina", value: "1.5x", highlight: false },
+  { label: "Stamina Cost", value: "0.2x", highlight: true },
+  { label: "Item Spoil", value: "0.1x", highlight: false },
+  { label: "Hunger Drain", value: "0.5x", highlight: false },
+  { label: "Thirst Drain", value: "0.5x", highlight: false },
+  { label: "Item Conversion", value: "0.1x", highlight: false },
+  { label: "Stability Loss", value: "0.0x", highlight: false },
+]
+
+const serverFeatures = [
+  "PvE — Player vs Environment",
+  "Nothing dropped on death",
+  "Only owner can loot corpse",
+  "No PVP building damage",
+  "Build anywhere, even near POIs",
+  "Characters log out with you",
 ]
 
 export function RatesSection() {
@@ -40,7 +49,7 @@ export function RatesSection() {
             <span className="text-gradient">Progression</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Carefully tuned rates for enjoyable gameplay without endless grinding
+            Carefully tuned rates for enjoyable PvE gameplay without endless grinding
           </p>
         </motion.div>
 
@@ -57,7 +66,7 @@ export function RatesSection() {
               x5
             </span>
             <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] uppercase text-muted-foreground">
-              Base Multiplier
+              Harvest Multiplier
             </span>
           </div>
         </motion.div>
@@ -91,26 +100,20 @@ export function RatesSection() {
           ))}
         </motion.div>
 
-        {/* Additional Info */}
+        {/* Server Features */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground"
+          className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground"
         >
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            <span>Day/Night: 0.5x Slower</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            <span>Decay Timer: 14 Days</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            <span>Purge: Weekends Only</span>
-          </div>
+          {serverFeatures.map((feature) => (
+            <div key={feature} className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+              <span>{feature}</span>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
