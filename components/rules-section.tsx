@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Shield, Users, Hammer, MessageSquare, AlertTriangle, Heart, Home } from "lucide-react"
+import { Shield, Users, Hammer, MessageSquare, AlertTriangle, Heart, Home, Wrench, UserCheck } from "lucide-react"
 
 const rules = [
   {
@@ -40,15 +40,29 @@ const rules = [
       "Maximum base size is 15×15×15 tiles. This includes all connected structures and outposts per player or clan. Bases exceeding this limit will be given a warning before admin removal. One main base per player/clan.",
   },
   {
-    icon: MessageSquare,
+    icon: UserCheck,
     number: "06",
+    title: "Thrall Limit",
+    description:
+      "Each player or clan is limited to a maximum of 10 active thralls placed in the world at any time. Excess thralls must be stored. This keeps server performance stable for everyone.",
+  },
+  {
+    icon: Wrench,
+    number: "07",
+    title: "Workbench Limit",
+    description:
+      "Players may only place one workbench of each type (e.g. one Blacksmith's Bench, one Alchemist's Bench, etc.). Duplicating stations is not allowed and surplus benches will be removed by admins.",
+  },
+  {
+    icon: MessageSquare,
+    number: "08",
     title: "Mod & Suggestion Policy",
     description:
       "All mod requests must be submitted through the Discord suggestions channel. Requests will go through a player vote and final admin review. The admin team has the final say on all changes.",
   },
   {
     icon: AlertTriangle,
-    number: "07",
+    number: "09",
     title: "Admin Decisions Are Final",
     description:
       "The admin team manages the server in good faith for the whole community. Decisions on rules, mods, and server settings are final. Repeated rule violations will result in a permanent ban without appeal.",
