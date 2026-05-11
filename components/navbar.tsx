@@ -10,6 +10,7 @@ const navLinks = [
   { href: "#features", label: "Features" },
   { href: "#rates", label: "Rates" },
   { href: "#mods", label: "Mods" },
+  { href: "#rules", label: "Rules" },
   { href: "#connect", label: "Connect" },
 ]
 
