@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Shield, Users, Hammer, MessageSquare, AlertTriangle, Heart } from "lucide-react"
+import { Shield, Users, Hammer, MessageSquare, AlertTriangle, Heart, Home } from "lucide-react"
 
 const rules = [
   {
@@ -33,15 +33,22 @@ const rules = [
       "Do not build in a way that blocks access to dungeons, resources, or key locations. Do not claim excessive land without using it. Admin reserves the right to remove structures that impact the server.",
   },
   {
-    icon: MessageSquare,
+    icon: Home,
     number: "05",
+    title: "Building Limits",
+    description:
+      "Maximum base size is 15×15×15 tiles. This includes all connected structures and outposts per player or clan. Bases exceeding this limit will be given a warning before admin removal. One main base per player/clan.",
+  },
+  {
+    icon: MessageSquare,
+    number: "06",
     title: "Mod & Suggestion Policy",
     description:
       "All mod requests must be submitted through the Discord suggestions channel. Requests will go through a player vote and final admin review. The admin team has the final say on all changes.",
   },
   {
     icon: AlertTriangle,
-    number: "06",
+    number: "07",
     title: "Admin Decisions Are Final",
     description:
       "The admin team manages the server in good faith for the whole community. Decisions on rules, mods, and server settings are final. Repeated rule violations will result in a permanent ban without appeal.",
